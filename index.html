@@ -78,6 +78,30 @@
     .download-btn:hover {
       opacity: 0.9;
     }
+    .screens-container {
+  display: flex;             /* ترتيب الصور أفقي */
+  gap: 16px;                 /* مسافة بين الصور */
+  overflow-x: auto;          /* تفعيل التمرير الأفقي */
+  padding: 10px 0;           /* مسافة فوق وتحت */
+  -webkit-overflow-scrolling: touch; /* سلاسة على الموبايل */
+}
+
+.screens-container::-webkit-scrollbar {
+  height: 8px;               /* ارتفاع شريط التمرير */
+}
+
+.screens-container::-webkit-scrollbar-thumb {
+  background: #FFD7A0;       /* لون شريط التمرير */
+  border-radius: 4px;
+}
+
+.screen-image {
+  height: 400px;              /* ارتفاع مناسب لكل صورة */
+  width: auto;                /* يحافظ على نسبة العرض/الارتفاع */
+  border-radius: 0;           /* بدون تأثير على الحواف */
+  flex-shrink: 0;             /* تمنع تصغير الصورة عند التمرير */
+}
+
 
     footer {
       margin-top: 40px;
@@ -107,7 +131,7 @@
       وتقديم محتوى يجمع بين الثقافة، التراث، والأخبار المحلية.
     </p>
 
-    <h2>مميزات التطبيق</h2>
+    <p>مميزات التطبيق</p>
     <ul>
       <li> بث مباشر مستمر على مدار الساعة</li>
       <li> جودة صوت عالية حتى مع الإنترنت الضعيف</li>
@@ -117,7 +141,14 @@
     </ul>
 
     <!-- صورة الشاشة -->
-    <img src="screen1.jpeg" alt="app screen 1" class="screen-image">
+    <p>معاينة التطبيق</p>
+<div class="screens-container">
+  <img src="screen1.jpeg" alt="app screen1" class="screen-image">
+  <img src="screen2.jpeg" alt="app screen2" class="screen-image">
+  <img src="screen3.jpeg" alt="app screen3" class="screen-image">
+  <img src="screen4.jpeg" alt="app screen4" class="screen-image">
+</div>
+
 
     <!-- زر التحميل من Google Play -->
     <a 
